@@ -11,19 +11,14 @@ import java.util.List;
 
 @Service
 public class CourseInfoServiceImpl implements CourseInfoService {
-
     @Autowired
     private RestTemplate restTemplate;
 
     @Autowired
     private CourseInformationHystrix courseInformationHystrix;
+
     @Override
     public List<Course> getUserCourses(Long userId) {
-
-////        RestTemplate restTemplate = new RestTemplate();
-//        UserCourse userCourses = restTemplate.getForObject("http://course-information/course/info" + userId, UserCourse.class);
-//        return userCourses.getCourses();
         return courseInformationHystrix.getById(userId);
     }
-
 }

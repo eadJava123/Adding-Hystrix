@@ -6,12 +6,10 @@ import com.example.course.model.CourseList;
 import com.example.course.model.Rating;
 import com.example.course.service.CourseInfoService;
 import com.example.course.service.CourseRatingService;
+import com.example.course.service.impl.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 import java.util.ArrayList;
@@ -26,6 +24,9 @@ public class CourseListController {
 
     @Autowired
     private CourseRatingService courseRatingService;
+
+    @Autowired
+    private CourseService courseService;
 
     @GetMapping("/{userId}")
     public ResponseEntity<?> getCourseList(@PathVariable Long userId){
@@ -44,5 +45,15 @@ public class CourseListController {
             userCourseList.add(courseList);
         }
         return ResponseEntity.ok(userCourseList);
+    }
+
+    @GetMapping("/getById")
+    public ResponseEntity<?> getCoursesById(@RequestParam("id") Long courseIds) {
+        return ResponseEntity.ok(courseService.getCoursesById(courseIds));
+    }
+
+    @PostMapping("/getByIds")
+    public ResponseEntity<?> getCoursesByIdList(@RequestBody() List<Long> courseIds) {
+        return ResponseEntity.ok(courseService.getCoursesByIds(courseIds));
     }
 }

@@ -1,4 +1,4 @@
-package com.example.course_chat.model;
+package kz.iitu.ead4.coursechatv2.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,4 +13,3 @@ public class UserCourseChat {
     private Long userId;
     private List<CourseChat> courses;
 }
-

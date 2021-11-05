@@ -18,7 +18,6 @@ public class CourseInformationHystrix implements com.example.course.service.Cour
     private RestTemplate restTemplate;
     @Override
     @HystrixCommand(
-
             fallbackMethod= "getByIdFallback",
             threadPoolKey= "getById",
             threadPoolProperties= {
