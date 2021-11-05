@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="course-chat:war">
+    <output-path>$PROJECT_DIR$/course-chat/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>false</exploded>
+        <module>course-chat</module>
+        <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
+      </options>
+    </properties>
+    <root id="archive" name="course-chat-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="course-chat:war exploded" />
+    </root>
+  </artifact>
+</component>

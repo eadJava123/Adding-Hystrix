@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Creating-and-Communicating-Microservices-master.iml" filepath="$PROJECT_DIR$/.idea/Creating-and-Communicating-Microservices-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/books/books.iml" filepath="$PROJECT_DIR$/books/books.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course/course.iml" filepath="$PROJECT_DIR$/course/course.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-chat/course-chat.iml" filepath="$PROJECT_DIR$/course-chat/course-chat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-information/course-information.iml" filepath="$PROJECT_DIR$/course-information/course-information.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-rating/course-rating.iml" filepath="$PROJECT_DIR$/course-rating/course-rating.iml" />
+      <module fileurl="file://$PROJECT_DIR$/discovery/discovery.iml" filepath="$PROJECT_DIR$/discovery/discovery.iml" />
+    </modules>
+  </component>
+</project>
